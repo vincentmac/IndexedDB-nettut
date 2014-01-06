@@ -1,0 +1,60 @@
+doctype html
+html.no-js(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title IndexedDB Note App Tutorial
+    link(rel='stylesheet', href='styles/app.css')
+    script(src='bower_components/modernizr/modernizr.js')
+  body
+    nav.top-bar
+      ul.title-area
+        li.name
+          h1
+            a(href='#') IndexedDB Tutorial
+    section
+    .row
+      .large-12.columns
+        .panel
+          //- h3 IndexedDB Tutorial
+          .row
+            .large-4.medium-4.columns
+              input#name(type='text', placeholder='Name')
+            .large-4.medium-4.columns
+              input#email(type='email', placeholder='Email')
+            .large-4.medium-4.columns
+              button#addButton Add Data
+          .row
+            .large-4.medium-4.columns
+              input#key(type='number')
+            .large-4.medium-4.columns
+              button#getButton Get Person
+            .large-4.medium-4.columns
+              #status
+    .row
+      .large-12.columns
+        .panel
+          .row
+            .large-4.medium-4.columns
+              label(for='name-search') Starting with:
+              input#name-search(type='text', name='name-search', placeholder='Name')
+            .large-4.medium-4.columns
+              label(for='name-search-end') Ending with:
+              input#name-search-end(type='text', name='name-search-end', placeholder='Name')
+            .large-4.medium-4.columns
+              button#getPeople Get People By Name Range
+          .row
+            .large-12.columns
+              #peopleRange
+    .row
+      .large-12.columns
+        button#getAllPeople Get All People
+        .row
+          .large-12.columns
+            #allPeople
+
+    //- Scripts
+    //- ==========================================
+    // script(src='scripts/app.js')
+    script(src='scripts/vendor.js')
+    script(src='scripts/main.js')

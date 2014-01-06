@@ -1,0 +1,61 @@
+doctype html
+html.no-js(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title IndexedDB Note App Tutorial
+    link(rel='stylesheet', href='styles/app.css')
+    script(src='bower_components/modernizr/modernizr.js')
+  body
+    nav.top-bar
+      .row
+        .large-12.columns
+          ul.title-area
+            li.name
+              h1
+                a(href='#') IndexedDB Note App Tutorial 
+                  span#note-count
+          ul.right
+            li
+              input#filter(type='search', placeholder='Filter')
+    section
+      .row
+        .large-12.columns#note-list
+          //- #note-list
+          //-   h1 Note List goes here
+      .row
+        .large-3.columns.right
+          button#add-note.right Add Note
+    section
+      .row
+        .large-12.columns
+          #note-detail
+            h3 Note details shown here
+    section
+      .row
+        .large-12.columns
+          #note-form
+            h3 Edit note
+            form
+              .row
+                .large-12.columns
+                  input#key(type='hidden')
+                  label(for='title') Title
+                  input#title(type='text', name='title', required)
+              .row
+                .large-12.columns
+                  label(for='body') Note Body
+                  textarea#body(type='text', name='body', required)
+              .row
+                .large-12.columns
+                  label(for='tags') Tags (comma separated)
+                  input#tags(type='text', name='tags')
+              .row
+                .large-3.columns
+                  button#save-note Save Note
+
+    //- Scripts
+    //- ==========================================
+    // script(src='scripts/app.js')
+    script(src='scripts/vendor.js')
+    script(src='scripts/main.js')
